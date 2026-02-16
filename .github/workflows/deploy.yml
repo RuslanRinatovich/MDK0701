@@ -1,0 +1,70 @@
+name: Build and Deploy Course Site
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Marp CLI
+        run: npm install -g @marp-team/marp-cli
+
+      - name: Create output directory
+        run: mkdir -p public
+
+      # Копируем статические файлы (изображения, шпаргалки и т.д.)
+      - name: Copy static files
+        run: |
+          cp -r CHEATSHEETS public/ || true
+          cp -r GUIDES public/ || true
+          cp -r LESSONS/images public/LESSONS/images || true
+          cp COURSE_PLAN_NO_PROJECT.MD public/ || true
+
+      # Конвертируем README.md (главную) в index.html
+      - name: Build index
+        run: marp README.md -o public/index.html
+
+      # Конвертируем все файлы .md в папках LESSONS в HTML
+      - name: Build lessons
+        run: |
+          for lesson_dir in LESSONS/lesson-*/ ; do
+            if [ -d "$lesson_dir" ]; then
+              # Создаём папку назначения
+              dest_dir="public/${lesson_dir}"
+              mkdir -p "$dest_dir"
+
+              # Если есть README.md (подробная лекция) -> index.html
+              if [ -f "${lesson_dir}README.md" ]; then
+                marp "${lesson_dir}README.md" -o "${dest_dir}index.html"
+              fi
+
+              # Если есть slides.md -> slides.html
+              if [ -f "${lesson_dir}slides.md" ]; then
+                marp "${lesson_dir}slides.md" -o "${dest_dir}slides.html"
+              fi
+
+              # Если есть practice.md -> practice.html
+              if [ -f "${lesson_dir}practice.md" ]; then
+                marp "${lesson_dir}practice.md" -o "${dest_dir}practice.html"
+              fi
+
+              # Копируем любые изображения внутри папки урока
+              cp -r "${lesson_dir}"images/ "${dest_dir}"images/ 2>/dev/null || true
+            fi
+          done
+
+      # Деплой на GitHub Pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public

@@ -1,116 +1,141 @@
-# Marp CLI example
+# МДК.07.01 «Управление и автоматизация баз данных»  
+**Специальность**: 09.02.07 «Информационные системы и программирование»  
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/yhatt/marp-cli-example)
+> 💡 **Фокус курса**: администрирование и автоматизация в **Microsoft SQL Server**.  
+> Студенты изучают проектирование БД и язык SQL на другом предмете (на PostgreSQL).  
+> Здесь — **установка, безопасность, резервное копирование, мониторинг, автоматизация**.
 
-**The good starter example for using [Marp] via [Marp CLI].**
+🌐 **Сайт курса**: [https://your-nick.github.io/repo-name/](https://your-nick.github.io/repo-name/)  
+📁 **Исходный код**: все материалы лежат в папках `LESSONS/lesson-*`  
 
-- Write your slide deck by [Marp] Markdown.
-- Manage the content of slides via Git. (Using [GitPitch](https://github.com/gitpitch/gitpitch) style `PITCHME.md`)
-- Host your deck at GitHub, and publish as webpage with [GitHub Pages], [Netlify], and [Vercel].
-- Blazingly fast delivery out of the box. [Acquired all 100% Lighthouse scores!](#lighthouse)
+---
 
-[marp]: https://marp.app/
-[marp cli]: https://github.com/marp-team/marp-cli
-[github pages]: https://pages.github.com/
-[netlify]: https://www.netlify.com/
-[vercel]: https://vercel.com/
+## 📚 Содержание
 
-<p align="center">
-  <a href="https://yhatt.github.io/marp-cli-example"><img src="https://yhatt.github.io/marp-cli-example/og-image.jpg" width="500" /></a>
-</p>
+- [Модуль 1. Введение в MS SQL Server и роль администратора](#модуль-1-введение-в-ms-sql-server-и-роль-администратора)
+- [Модуль 2. Архитектура и безопасность MS SQL Server](#модуль-2-архитектура-и-безопасность-ms-sql-server)
+- [Модуль 3. Управление структурой и производительностью](#модуль-3-управление-структурой-и-производительностью)
+- [Модуль 4. Резервное копирование и восстановление](#модуль-4-резервное-копирование-и-восстановление)
+- [Модуль 5. Автоматизация, мониторинг и сопровождение](#модуль-5-автоматизация-мониторинг-и-сопровождение)
 
-## See published slide deck
+---
 
-- <img src="https://icongr.am/octicons/mark-github.svg" width="24" height="24" valign="bottom" /> **[GitHub Pages]**: https://yhatt.github.io/marp-cli-example
-- <img src="https://icongr.am/simple/netlify.svg?colored" width="24" height="24" valign="bottom" /> **[Netlify]**: https://yhatt-marp-cli-example.netlify.app/
-- <img src="https://icongr.am/simple/zeit.svg" width="24" height="24" valign="bottom" /> **[Vercel]**: https://marp-cli-example.yhatt.vercel.app/
+## Модуль 1. Введение в MS SQL Server и роль администратора
 
-### Lighthouse
+| № | Тип | Тема | Ссылки |
+|--:|-----|------|--------|
+| 0 | 📖 Лекция | Основные понятия теории БД | [Подробнее](LESSONS/lesson-00/) |
+| 1 | 📖 Лекция | Обязанности администратора баз данных | [Подробнее](LESSONS/lesson-01/) |
+| 1 | 🛠 Практика | Знакомство с Microsoft SQL Server и установка Developer Edition | [Задание](LESSONS/lesson-01/practice.html) |
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/3993388/115988866-7cd7fe00-a5f6-11eb-9e51-7a62da998eca.png" width="615" alt="Acquired all 100% Lighthouse scores" />
-</p>
+---
 
-## Usage
+## Модуль 2. Архитектура и безопасность MS SQL Server
 
-It's surprisingly easy to start publishing your slide deck!
+| № | Тип | Тема | Ссылки |
+|--:|-----|------|--------|
+| 2 | 📖 Лекция | Архитектура MS SQL Server. Управление экземпляром и базами данных | [Подробнее](LESSONS/lesson-02/) |
+| 2 | 🛠 Практика | Управление экземпляром и базами данных в MS SQL Server | [Задание](LESSONS/lesson-02/practice.html) |
+| 3 | 📖 Лекция | Управление доступом к базам данных в Microsoft SQL Server | [Подробнее](LESSONS/lesson-03/) |
+| 3 | 🛠 Практика | Настройка безопасности: логины, пользователи, роли и привилегии | [Задание](LESSONS/lesson-03/practice.html) |
+| 4 | 📖 Лекция | Объекты БД в MS SQL Server — с позиции администратора | [Подробнее](LESSONS/lesson-04/) |
 
-### <img src="https://icongr.am/octicons/mark-github.svg" width="24" height="24" valign="bottom" /> [GitHub Pages]
+---
 
-Create a new _public_ repository based on this repository, from **"Use this template"** button!
+## Модуль 3. Управление структурой и производительностью
 
-[![](https://img.shields.io/badge/-Use%20this%20template-brightgreen?style=for-the-badge&logo=github)](https://github.com/yhatt/marp-cli-example/generate)
+| № | Тип | Тема | Ссылки |
+|--:|-----|------|--------|
+| 4 | 🛠 Практика | Управление структурой БД: схемы, таблицы, индексы | [Задание](LESSONS/lesson-04/practice.html) |
+| 5 | 📖 Лекция | Схемы: логическая изоляция, dbo vs custom, управление правами | [Подробнее](LESSONS/lesson-05/) |
+| 5 | 🛠 Практика | Работа с несколькими схемами; GRANT ON SCHEMA | [Задание](LESSONS/lesson-05/practice.html) |
+| 6 | 📖 Лекция | Индексы: кластерные, некластерные, покрытия | [Подробнее](LESSONS/lesson-06/) |
+| 6 | 🛠 Практика | Создание и анализ индексов; INCLUDE-столбцы | [Задание](LESSONS/lesson-06/practice.html) |
+| 7 | 📖 Лекция | Фрагментация индексов: причины и методы борьбы | [Подробнее](LESSONS/lesson-07/) |
+| 7 | 🛠 Практика | Проверка фрагментации через DMV; REBUILD vs REORGANIZE | [Задание](LESSONS/lesson-07/practice.html) |
+| 8 | 📖 Лекция | Статистика запросов: обновление и автоматизация | [Подробнее](LESSONS/lesson-08/) |
+| 8 | 🛠 Практика | Обновление статистики; анализ простого плана выполнения | [Задание](LESSONS/lesson-08/practice.html) |
+| 9 | 📖 Лекция | Системные представления: sys.tables, sys.schemas, sys.indexes | [Подробнее](LESSONS/lesson-09/) |
+| 9 | 🛠 Практика | Диагностика: список объектов, права, зависимости | [Задание](LESSONS/lesson-09/practice.html) |
+| 10 | 📖 Лекция | Динамические представления (DMV): сессии, ожидания, ресурсы | [Подробнее](LESSONS/lesson-10/) |
+| 10 | 🛠 Практика | Мониторинг активных подключений и нагрузки | [Задание](LESSONS/lesson-10/practice.html) |
+| 11 | 📖 Лекция | Системные процедуры: sp_who2, sp_helpdb, sp_spaceused | [Подробнее](LESSONS/lesson-11/) |
+| 11 | 🛠 Практика | Использование процедур для быстрой диагностики | [Задание](LESSONS/lesson-11/practice.html) |
+| 12 | 📖 Лекция | Ограничения ресурсов: Resource Governor (введение) | [Подробнее](LESSONS/lesson-12/) |
+| 12 | 🛠 Практика | Просмотр использования памяти и CPU через DMV | [Задание](LESSONS/lesson-12/practice.html) |
+| 13.1 | 📖 Лекция | Основы хранимых процедур: создание и простые примеры | [Подробнее](LESSONS/lesson-13_1/) |
+| 13.1 | 🛠 Практика | Создание простых админ-процедур | [Задание](LESSONS/lesson-13_1/practice.html) |
+| 13.2 | 📖 Лекция | Параметры и переменные в хранимых процедурах | [Подробнее](LESSONS/lesson-13_2/) |
+| 13.2 | 🛠 Практика | Процедуры с параметрами и переменными | [Задание](LESSONS/lesson-13_2/practice.html) |
+| 13.3 | 📖 Лекция | Продвинутые техники создания админ-процедур | [Подробнее](LESSONS/lesson-13_3/) |
+| 13.3 | 🛠 Практика | Продвинутые техники создания админ-процедур | [Задание](LESSONS/lesson-13_3/practice.html) |
 
-We already have [GitHub Actions workflow](.github/workflows/github-pages.yml) to build and deploy automatically when merged to master branch. It's also available to deploy from any branch manually.
+---
 
-To get started, turn on GitHub Pages in repository's "**Settings** tab → **Pages**" [by setting source as "GitHub Actions"](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow).
+## Модуль 4. Резервное копирование и восстановление
 
-### <img src="https://icongr.am/simple/netlify.svg?colored" width="24" height="24" valign="bottom" /> [Netlify]
+| № | Тип | Тема | Ссылки |
+|--:|-----|------|--------|
+| 14 | 📖 Лекция | Модели восстановления: SIMPLE, FULL, BULK_LOGGED | [Подробнее](LESSONS/lesson-14/) · [Слайды](LESSONS/lesson-14/slides.html) |
+| 14 | 🛠 Практика | Изменение модели восстановления; анализ свойств БД | [Задание](LESSONS/lesson-14/practice.html) |
+| 15 | 📖 Лекция | Типы резервных копий: полная, разностная, журнал транзакций | [Подробнее](LESSONS/lesson-15/) · [Слайды](LESSONS/lesson-15/slides.html) |
+| 15 | 🛠 Практика | Создание полной резервной копии (SSMS + T-SQL) | [Задание](LESSONS/lesson-15/practice.html) |
+| 16 | 📖 Лекция | Стратегии резервного копирования: ежедневно, ежечасно | [Подробнее](LESSONS/lesson-16/) |
+| 16 | 🛠 Практика | Создание разностной резервной копии | [Задание](LESSONS/lesson-16/practice.html) |
+| 17 | 📖 Лекция | Журнал транзакций: управление размером и усечение | [Подробнее](LESSONS/lesson-17/) |
+| 17 | 🛠 Практика | Резервное копирование журнала транзакций | [Задание](LESSONS/lesson-17/practice.html) |
+| 18 | 📖 Лекция | Восстановление: полное, по времени, до точки отказа | [Подробнее](LESSONS/lesson-18/) |
+| 18 | 🛠 Практика | Восстановление из полной резервной копии | [Задание](LESSONS/lesson-18/practice.html) |
+| 19 | 📖 Лекция | Point-in-Time Recovery: теория и требования | [Подробнее](LESSONS/lesson-19/) |
+| 19 | 🛠 Практика | Моделирование ошибки → восстановление до момента до неё | [Задание](LESSONS/lesson-19/practice.html) |
+| 21 | 📖 Лекция | Проверка целостности: RESTORE VERIFYONLY, DBCC CHECKDB | [Подробнее](LESSONS/lesson-21/) |
+| 21 | 🛠 Практика | Проверка резервной копии; восстановление на тестовую БД | [Задание](LESSONS/lesson-21/practice.html) |
+| 22 | 📖 Лекция | Автоматизация резервного копирования: скрипты | [Подробнее](LESSONS/lesson-22/) |
+| 22 | 🛠 Практика | Создание универсального скрипта с динамическим именем | [Задание](LESSONS/lesson-22/practice.html) |
+| 23 | 📖 Лекция | Хранение резервных копий: локально, сетевые папки | [Подробнее](LESSONS/lesson-23/) |
+| 23 | 🛠 Практика | Настройка резервного копирования в сетевую папку | [Задание](LESSONS/lesson-23/practice.html) |
+| 24 | 📖 Лекция | Журнал msdb: отслеживание успешных/неудачных операций | [Подробнее](LESSONS/lesson-24/) |
+| 24 | 🛠 Практика | Анализ истории резервных копий и заданий | [Задание](LESSONS/lesson-24/practice.html) |
+| 25 | 📖 Лекция | Шифрование резервных копий (TDE, backup encryption) | [Подробнее](LESSONS/lesson-25/) |
+| 25 | 🛠 Практика | Создание зашифрованной резервной копии | [Задание](LESSONS/lesson-25/practice.html) |
+| 26 | 📖 Лекция | Восстановление на другой сервер (restore to new server) | [Подробнее](LESSONS/lesson-26/) |
+| 26 | 🛠 Практика | Восстановление БД на новом экземпляре SQL Server | [Задание](LESSONS/lesson-26/practice.html) |
 
-Push **"Deploy to netlify"** button. [Netlify] will create your repository based on this example and host website from `master` branch automatically.
+---
 
-[![Deploy to Netlify](./assets/netlify-deploy-button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yhatt/marp-cli-example)
+## Модуль 5. Автоматизация, мониторинг и сопровождение
 
-### <img src="https://icongr.am/simple/zeit.svg" width="24" height="24" valign="bottom" /> [Vercel]
+*(аналогично по всем занятиям)*
 
-Push **"Deploy"** button. [Vercel] can choose to create your repository based on this example.
+---
 
-[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/yhatt/marp-cli-example)
+## 📎 Полезные ресурсы
 
-> :information_source: To enable the auto-generated open graph image in Vercel, you have to turn on ["Automatically expose System Environment Variables"](https://vercel.com/docs/concepts/projects/environment-variables#system-environment-variables) in your Vercel project dashboard.
+- [Полный учебный план](COURSE_PLAN_NO_PROJECT.MD)  
+- [Шпаргалка: безопасность в MS SQL Server](CHEATSHEETS/security_cheatsheet.md)  
+- [Шпаргалка: T-SQL для администратора](CHEATSHEETS/tsql_admin_cheatsheet.md)  
+- [Инструкция по сдаче отчётов](GUIDES/report_submission_guide.md)
 
-## How to write
+---
 
-For Marp slide deck features, please see the documentation of [Marpit Markdown](https://marpit.marp.app/markdown), [the features of Marp Core](https://github.com/marp-team/marp-core#features), and the default example in [`PITCHME.md`](https://raw.githubusercontent.com/yhatt/marp-cli-example/master/PITCHME.md) for .
+## 🧭 Как пользоваться сайтом
 
-You have to install [Node.js](https://nodejs.org/) and run `npm i` at first if you want to write slide deck with [Marp CLI].
+- **Лекция** — подробный материал, доступен по ссылке «Подробнее». В папке урока это файл `README.md`, на сайте — `index.html`.
+- **Слайды** (там, где есть) — краткая презентация в формате Marp, открывается как `slides.html`.
+- **Практика** — задание, ссылка на `practice.html`.
 
-### Edit deck
+Все ссылки ведут на **HTML‑версии**, сгенерированные автоматически через GitHub Actions. Если вы просматриваете этот файл прямо в репозитории, некоторые ссылки могут вести на ещё не созданные страницы – но после сборки сайта они станут рабочими.
 
-Just edit **[`PITCHME.md`](./PITCHME.md)**!
+---
 
-#### Preview deck
+## 🚀 Статус готовности материалов
 
-**[Marp for VS Code]** extension is the best partner for writing Marp slide deck with live preview.
+> ✅ – материал полностью готов  
+> 🚧 – в разработке  
+> 📅 – запланирован  
 
-<p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode">
-    <img src="https://raw.githubusercontent.com/marp-team/marp-vscode/master/docs/screenshot.png" width="500" />
-  </a>
-</p>
+*(Можно добавить колонку со статусом, если нужно)*
 
-**You can try edit and preview on the web now!** Open https://github.dev/yhatt/marp-cli-example/blob/master/PITCHME.md or hit <kbd>.</kbd> key on this repository, and install [Marp for VS Code] extension.
+---
 
-[marp for vs code]: https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode
-
-#### Preview via CLI
-
-```bash
-npm run start
-```
-
-It will be opened preview window via installed Google Chrome, and track change of `PITCHME.md`.
-
-### Assets and themes
-
-- `assets` directory can put your assets for using in the deck. (e.g. Image resources)
-- `themes` directory can put [custom theme CSS](https://marpit.marp.app/theme-css). To use in the deck, please change `theme` global directive.
-
-### Build deck via CLI
-
-```bash
-npm run build
-```
-
-The built assets will output to `public` folder.
-
-#### Build per assets
-
-```bash
-npm run deck      # Output static HTML to public/index.html
-npm run og-image  # Output image for Open Graph to public/og-image.jpg
-```
-
-## LICENSE
-
-[WTFPL](/LICENSE)
+**Удачи в изучении администрирования SQL Server!** 💪
